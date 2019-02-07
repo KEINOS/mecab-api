@@ -1,0 +1,27 @@
+version: "3"
+
+volumes:
+  mecab_data_back:
+  mecab_data_front:
+
+services:
+  api:
+    build:
+      context: https://github.com/KEINOS/mecab-flask-back.git
+    volumes:
+      - "mecab_data_back:/opt/api"
+    ports:
+      - "5000:5000"
+    restart: always
+  front:
+    build:
+      context: https://github.com/KEINOS/mecab-flask-front.git
+    volumes:
+      - "mecab_data_front:/opt/front"
+    ports:
+      - "5001:5001"
+    restart: always
+    links:
+      - api
+    environment:
+      FLASK_MECAB_URI: "http://api:5000/mecab/v1"
