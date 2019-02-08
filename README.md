@@ -2,13 +2,13 @@
 
 Docker compose file for MeCab API with mecab-ipadic-neologd.
 
-> Note: Only works on Intel/AMD architecture. Can't figure out to make it work on ARM such as RaspberryPi, yet.
+> Note: Only works on Intel/AMD(x86_64) architecture. Can't figure out to make it work on ARM such as RaspberryPi, yet.
 
 <details><summary>How to check your architecture.</summary><div>
 
 ```
 $ uname -a
-Darwin KEINOS-MacMini.local 17.7.0 Darwin Kernel Version 17.7.0: Thu Dec 20 21:47:19 PST 2018; root:xnu-4570.71.22~1/RELEASE_X86_64 x86_64
+Darwin KeinosNoMacBookPro.local 17.7.0 Darwin Kernel Version 17.7.0: Thu Dec 20 21:47:19 PST 2018; root:xnu-4570.71.22~1/RELEASE_X86_64 x86_64
 ```
 
 </div></details>
